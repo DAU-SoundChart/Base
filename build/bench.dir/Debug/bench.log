@@ -7,7 +7,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.3351
   	컴파일되는 클래스 템플릿 인스턴스화 'std::basic_istream<char,std::char_traits<char>>'에 대한 참조를 확인하세요.
   	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\istream(331,33):
   	클래스 템플릿 멤버 함수 'int std::basic_istream<char,std::char_traits<char>>::get(void)'을(를) 컴파일하는 중입니다.
-  		C:\Users\khj02\Documents\GitHub\Base\libbench2\main.cpp(173,17):
+  		C:\Users\khj02\Documents\GitHub\Base\libbench2\main.cpp(185,17):
   		'main'에서 'std::basic_istream<char,std::char_traits<char>>::get'에 대한 첫 번째 참조를 확인하세요.
   
   bench.vcxproj -> C:\fftw-3.3.10\build\Debug\bench.exe

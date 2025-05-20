@@ -10,6 +10,10 @@ constexpr int FRAMES_PER_BUFFER = 256;
 #define M_PI 3.14159265358979323846
 #endif
 
+// 시야각은 라디안 단위로 관리 (나중에 degree로 변환 가능)
+float horizontalFOV = 160.0f * M_PI / 180.0f; // 좌우 시야, ±20도
+float verticalFOV = 60.0f * M_PI / 180.0f;   // 상하 시야, ±30도
+
 struct Vec3 {
     float x, y, z;
 };
@@ -37,13 +41,16 @@ void generateVirtualStockData(int N) {
         float price = 10 + 90 * (0.5f + 0.5f * sinf(i * 0.15f));
         stockData.push_back({ static_cast<float>(i), price });
 
-        // 원형 대신 단순 직선 좌우 배치 (사용자 앞쪽 평면에 놓임)
-        float x = -1.0f + 2.0f * i / (N - 1); // -1부터 +1까지 균일 분포
-        float y = (price - 10) / 90.0f * 2.0f - 1.0f; // -1~1 정규화 높이
-        float z = 0.0f;
+        // 각도 범위를 시야각 내로 제한 (좌우 시야 범위)
+        float angle = -horizontalFOV / 2.0f + (float)i / (N - 1) * horizontalFOV;
+        float x = radius * sinf(angle);   // 좌우 방향 (sin)
+        float z = radius * cosf(angle);   // 앞 방향 (cos)
+        float y = (price - 10) / 90.0f * 2.0f - 1.0f; // 높이 -1~1
+
         positions.push_back({ x, y, z });
     }
 }
+
 
 // 2. 가격 → 주파수 변환
 float priceToFrequency(float price) {
@@ -58,14 +65,19 @@ float priceToFrequency(float price) {
 
 // 3. 좌우 패닝 (-1: 왼쪽, +1: 오른쪽)
 float calcPanX(const Vec3& pos) {
-    if (pos.x < -1.0f) return -1.0f;
-    if (pos.x > 1.0f) return 1.0f;
-    return pos.x;
+    // pos.x는 이미 -sin(시야각) 범위 내
+    // pos.x를 [-1, 1]로 정규화(이미 시야 내 배치라 그대로 사용)
+    float pan = pos.x;
+    if (pan < -1.0f) pan = -1.0f;
+    if (pan > 1.0f) pan = 1.0f;
+    return pan;
 }
 
 // 4. 상하 볼륨 (0~1)
 float calcVolY(const Vec3& pos) {
-    float vol = (pos.y + 1.0f) / 2.0f;
+    // pos.y는 -1~1 사이로 높이 정규화 되어 있음
+    // verticalFOV 각도와 연동하는 감쇠는 선택 사항
+    float vol = (pos.y + 1.0f) / 2.0f; // 0~1 볼륨으로 변환
     if (vol < 0.0f) vol = 0.0f;
     if (vol > 1.0f) vol = 1.0f;
     return vol;
