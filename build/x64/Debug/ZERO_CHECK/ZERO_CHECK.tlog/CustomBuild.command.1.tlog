@@ -1,0 +1,10 @@
+^C:\FFTW-3.3.10\BUILD\CMAKEFILES\EA14066B2390B1F5AB2F6CDC2396E06F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/fftw-3.3.10 -BC:/fftw-3.3.10/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/fftw-3.3.10/build/fftw.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

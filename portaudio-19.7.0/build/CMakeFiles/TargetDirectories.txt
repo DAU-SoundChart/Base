@@ -1,0 +1,6 @@
+C:/portaudio-19.7.0/build/CMakeFiles/portaudio.dir
+C:/portaudio-19.7.0/build/CMakeFiles/portaudio_static.dir
+C:/portaudio-19.7.0/build/CMakeFiles/uninstall.dir
+C:/portaudio-19.7.0/build/CMakeFiles/INSTALL.dir
+C:/portaudio-19.7.0/build/CMakeFiles/ALL_BUILD.dir
+C:/portaudio-19.7.0/build/CMakeFiles/ZERO_CHECK.dir

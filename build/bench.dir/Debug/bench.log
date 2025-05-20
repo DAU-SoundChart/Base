@@ -1,0 +1,49 @@
+﻿  after-ccopy-from.c
+  after-ccopy-to.c
+  after-hccopy-from.c
+  after-hccopy-to.c
+  after-rcopy-from.c
+  after-rcopy-to.c
+  allocate.c
+  aset.c
+  bench-cost-postprocess.c
+  bench-exit.c
+  bench-main.c
+  can-do.c
+  caset.c
+  dotens2.c
+  info.c
+  mflops.c
+  mp.c
+  my-getopt.c
+  ovtpvt.c
+  pow2.c
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  problem.c
+  report.c
+  speed.c
+  tensor.c
+  timer.c
+  util.c
+  verify-dft.c
+  verify-lib.c
+  verify-r2r.c
+C:\fftw-3.3.10\libbench2\verify-lib.c(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\fftw-3.3.10\libbench2\verify-r2r.c(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  verify-rdft2.c
+  verify.c
+  zero.c
+  bench.c
+  hook.c
+  fftw-bench.c
+  코드를 생성하고 있습니다...
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\ostream(779,9): warning C4530: C++ 예외 처리기가 사용되었지만 해제 의미 체계가 활성화되지 않았습니다. /EHsc를 지정하십시오.
+  (소스 파일 '../libbench2/main.cpp'을(를) 컴파일하는 중)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\ostream(779,9):
+  템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+  	C:\Users\khj02\Documents\GitHub\Base\libbench2\main.cpp(40,10):
+  	컴파일되는 함수 템플릿 인스턴스화 'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)'에 대한 참조를 확인하세요.
+  
+  bench.vcxproj -> C:\fftw-3.3.10\build\Debug\bench.exe

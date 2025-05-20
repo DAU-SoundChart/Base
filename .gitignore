@@ -1,3 +1,6 @@
+# 제외 대상
+.vs/
+
 # Prerequisites
 *.d
 

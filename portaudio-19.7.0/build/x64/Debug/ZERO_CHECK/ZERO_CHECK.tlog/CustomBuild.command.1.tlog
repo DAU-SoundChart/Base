@@ -1,0 +1,10 @@
+^C:\PORTAUDIO-19.7.0\BUILD\CMAKEFILES\63DF4AED6553EBB85A205A78EBABC010\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/portaudio-19.7.0 -BC:/portaudio-19.7.0/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/portaudio-19.7.0/build/portaudio.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

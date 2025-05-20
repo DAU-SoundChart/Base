@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\portaudio-19.7.0\build\CMakeFiles\63df4aed6553ebb85a205a78ebabc010\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A9284F51-FFED-3448-99AC-CA9B648F8E89}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
