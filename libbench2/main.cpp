@@ -73,7 +73,7 @@ float calcVolY(const Vec3& pos) {
 
 // 5. PortAudio 콜백 - 한 번만 재생하고 종료
 unsigned int sampleCounter = 0;
-const unsigned int samplesPerStep = SAMPLE_RATE / 2; // 0.5초마다 다음 점으로 이동
+const unsigned int samplesPerStep = SAMPLE_RATE / 4; // 0.25초마다 다음 점으로 이동
 
 static int paCallback(const void* inputBuffer, void* outputBuffer,
     unsigned long framesPerBuffer,
@@ -125,8 +125,24 @@ static int paCallback(const void* inputBuffer, void* outputBuffer,
     return paContinue;
 }
 
+// 그래프 그려봄
+void printStockDataAndPositions() {
+    std::cout << "Index\tTime\tPrice\tX\tY\tZ\n";
+    for (size_t i = 0; i < stockData.size(); ++i) {
+        std::cout
+            << i << "\t"
+            << stockData[i].time << "\t"
+            << stockData[i].price << "\t"
+            << positions[i].x << "\t"
+            << positions[i].y << "\t"
+            << positions[i].z << "\n";
+    }
+}
+
 int main() {
-    generateVirtualStockData(100);
+    generateVirtualStockData(30);
+
+    printStockDataAndPositions();
 
     PaError err = Pa_Initialize();
     if (err != paNoError) {
