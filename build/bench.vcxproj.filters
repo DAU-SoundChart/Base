@@ -109,6 +109,9 @@
     <ClCompile Include="C:\fftw-3.3.10\tests\fftw-bench.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main_base.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\fftw-3.3.10\libbench2\bench-user.h">

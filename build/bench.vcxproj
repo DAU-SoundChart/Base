@@ -347,6 +347,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\fftw-3.3.10\libbench2\bench-cost-postprocess.c" />
     <ClCompile Include="C:\fftw-3.3.10\libbench2\bench-exit.c" />
     <ClCompile Include="C:\fftw-3.3.10\libbench2\bench-main.c" />
+    <ClCompile Include="main_base.c" />
     <ClInclude Include="C:\fftw-3.3.10\libbench2\bench-user.h" />
     <ClInclude Include="C:\fftw-3.3.10\libbench2\bench.h" />
     <ClCompile Include="C:\fftw-3.3.10\libbench2\can-do.c" />
